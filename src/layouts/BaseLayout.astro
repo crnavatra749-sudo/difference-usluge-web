@@ -24,6 +24,9 @@ const schemas = [organization, ...(breadcrumbSchema ? [breadcrumbSchema] : []), 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#07090d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
@@ -42,8 +45,9 @@ const schemas = [organization, ...(breadcrumbSchema ? [breadcrumbSchema] : []), 
   {schemas.map((schema) => <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>)}
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Preskoči na sadržaj</a>
   <Header />
-  <main>
+  <main id="main-content">
     {breadcrumbs.length > 0 && <nav class="breadcrumbs container" aria-label="Breadcrumb"><a href="/">Početna</a>{breadcrumbs.slice(1).map((item, index) => <><span aria-hidden="true">/</span>{index === breadcrumbs.length - 2 ? <span aria-current="page">{item.name}</span> : <a href={item.url}>{item.name}</a>}</>)}</nav>}
     <slot />
   </main>
