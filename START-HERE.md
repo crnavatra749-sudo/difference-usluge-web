@@ -41,3 +41,7 @@ Tekstovi su u `src/content/`:
 - `src/content/vodic/`
 
 Nove vodiče i projekte možemo kasnije dodavati bez diranja postojeće strukture ruta.
+
+
+## V2 build stage
+This version adds desktop/mobile navigation dropdowns, visible breadcrumbs, Service/Article/CreativeWork/WebSite structured data, and keeps the Astro 7 content architecture stable.
