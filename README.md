@@ -1,16 +1,12 @@
-# Difference / BrandistiQ
+# Smart-troškovnik project system — v2
 
-Astro 7 static website for difference-usluge.com.hr.
+Ovo je ispravljena baza za sve buduće projekte.
 
-## Environment variables
-
-Optional Netlify environment variables:
-
-- `PUBLIC_GA_ID` — Google Analytics 4 Measurement ID, e.g. `G-XXXXXXXXXX`
-- `PUBLIC_GOOGLE_SITE_VERIFICATION` — Google Search Console verification token
-
-If these are not set, no analytics or verification tag is rendered.
-
-## Contact form
-
-The contact form uses Netlify Forms. Configure the notification recipient in Netlify under Forms / Form notifications after deployment.
+- Naslovna fotografija je zaseban 16:9 web cover, ne veliki mobilni screenshot.
+- Gallery fotografije su smanjene na praktičnu web širinu.
+- Astro `<Picture>` generira AVIF/WebP varijante i responsive širine.
+- Galerija je lazy-loaded.
+- Fotografije nisu više ogromni full-width blokovi: svaka je u kontroliranom media okviru i ima pripadajući tekst.
+- Na desktopu se slika i tekst izmjenjuju lijevo/desno; na mobitelu se slažu jedan ispod drugoga.
+- Homepage ProjectCard ima opcionalni cover.
+- Za svaki novi projekt koristimo isti frontmatter: cover, coverAlt, externalUrl i gallery.
