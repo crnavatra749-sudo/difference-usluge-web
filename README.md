@@ -1,19 +1,16 @@
 # Difference / BrandistiQ
 
-Astro website for BrandistiQ, the digital brand of Difference, obrt za usluge.
+Astro 7 static website for difference-usluge.com.hr.
 
-## Stack
-- Astro 7
-- Astro Content Collections with glob loaders
-- @astrojs/sitemap
-- Netlify
+## Environment variables
 
-## Structure
-- `/seo/` — SEO services
-- `/web-stranice/` — web services
-- `/ai-rjesenja/` — AI services
-- `/web-aplikacije/` — web applications
-- `/projekti/` — projects from content collection
-- `/vodic/` — Digitalni vodič from content collection
+Optional Netlify environment variables:
 
-Content is stored in `src/content/` and routes are deliberately simple so the project is easy to maintain.
+- `PUBLIC_GA_ID` — Google Analytics 4 Measurement ID, e.g. `G-XXXXXXXXXX`
+- `PUBLIC_GOOGLE_SITE_VERIFICATION` — Google Search Console verification token
+
+If these are not set, no analytics or verification tag is rendered.
+
+## Contact form
+
+The contact form uses Netlify Forms. Configure the notification recipient in Netlify under Forms / Form notifications after deployment.
